@@ -1,4 +1,8 @@
 /* eslint-disable */
+
+// 메인페이지에서 상품 img를 클릭하면 들어가는 상세페이지입니다.
+
+
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';

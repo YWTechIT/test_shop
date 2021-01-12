@@ -1,6 +1,8 @@
 /* eslint-disable */
-import React from 'react';
 
+// 장바구니 페이지입니다.
+
+import React from 'react';
 import { Table, Card, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import './FontAwesome';

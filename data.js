@@ -1,5 +1,8 @@
 /* eslint-disable */
 
+// 전체 데이터 페이지입니다.
+
+
 let productData =
     [
         {

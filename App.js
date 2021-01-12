@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+// 메인 파일입니다.
+
 import './App.css';
 // import './ScrollIndicator.css';
 import React, { useEffect, useState } from 'react';
