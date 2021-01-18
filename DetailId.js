@@ -1,8 +1,4 @@
 /* eslint-disable */
-
-// 메인페이지에서 상품 img를 클릭하면 들어가는 상세페이지입니다.
-
-
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
@@ -12,7 +8,7 @@ function DetailId(props) {
     let { id } = useParams();
     let history = useHistory();
     let 찾은상품 = props.product.find((e) => e.id == id);
-    
+
     useEffect(() => {
         window.scrollTo(0, 90)
     }, [])
@@ -22,7 +18,7 @@ function DetailId(props) {
             <div className="row">
                 <div className="col-sm" ></div>
                 <div className="col-md-5 mt-5" >
-                    <img src={'/images/' + (parseInt([id]) + 1) + '.jpg'} width='100%' height='70%'></img>
+                    <img src={'/images/' + (찾은상품['title']) + '.jpg'} width='100%' height='70%'></img>
                     <div className="col-md mt-2">
                         <h4 className="pt-3 mb-1">제품명: {찾은상품['title']}</h4>
                         <p className='fontSize21 mb-1'>기능: {찾은상품['content']} </p>

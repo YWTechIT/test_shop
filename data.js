@@ -1,8 +1,5 @@
 /* eslint-disable */
 
-// 전체 데이터 페이지입니다.
-
-
 let productData =
     [
         {
@@ -13,7 +10,7 @@ let productData =
         },
         {
             'id': 1,
-            'title': 'IPad',
+            'title': 'IWatch',
             'content': 'Powerful, Colorful, Wonderful',
             'price': '700000'
         },

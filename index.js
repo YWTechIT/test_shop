@@ -1,7 +1,3 @@
-
-// redux를 사용하는 페이지입니다.
-// 상세페이지에서 상품을 장바구니에 추가하거나, 추가한 상품의 수량 증가/제거 할 수 있습니다.
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -27,15 +23,15 @@ function reducer(state = 기본state, 액션) {
     } else {
       let copy = [...state];
       copy.push(액션.payload);
+      console.log(state);
       return copy;
     }
   }
 
   else if (액션.type === '항목제거') {
     let copy = [...state];
-    let index = copy.findIndex((e) => e.id);
-    console.log(index);
-    // copy.splice(index, 1);
+    let idx = copy.findIndex((e) => e.id === 액션.payload);
+    if (idx > -1) copy.splice(idx, 1);
     return copy;
   }
 

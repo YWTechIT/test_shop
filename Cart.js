@@ -1,32 +1,24 @@
 /* eslint-disable */
-
-// 장바구니 페이지입니다.
-
 import React from 'react';
+
 import { Table, Card, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import './FontAwesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { BootstrapTable, TableHeaderColumn, selectRowProp } from 'react-bootstrap-table';
 
 
 function Cart(props) {
     const selectRowProp = {
         mode: 'checkbox',
-        bgColor: 'lightgray'
+        bgColor: 'lightgrey'
         // clickToSelect: true  // enable click to select
     };
 
     return (
         <Card className='mt-5'>
-            {/* <BootstrapTable selectRow={ selectRowProp }>
-                <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='title'>Product Name</TableHeaderColumn>
-                <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
-            </BootstrapTable> */}
-
-            <h1>장바구니</h1>
+            <h1 className='text-md-left'><FontAwesomeIcon icon={faShoppingCart} size='1x' /></h1>
             <Table responsive striped bordered hover className='mt-5'>
                 <thead>
                     <tr>
