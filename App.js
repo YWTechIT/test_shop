@@ -10,12 +10,12 @@ import DetailId from './DetailId.js'
 import productData from './data.js';
 import Cart from './Cart.js'
 import CartData from './CartData.js'
+import Cards from './Card.js'
 
 function App() {
 
   let history = useHistory();
   let [product, setProduct] = useState(productData);
-
 
   const sorting = (type) => {
     if (type === 'name') {
@@ -107,17 +107,4 @@ function App() {
   );
 }
 
-function Cards(props) {
-  return (
-    <div className='col-md-4 mt-3' >
-      <img src={'./images/' + (props.product.title) + '.jpg'} width='100%' height='70%'
-        onClick={() => { props.history.push('/detail/' + props.product.id) }} />
-      <div className='border'>
-        <h2 className="pt-3 mb-1"> {props.product.title} </h2>
-        <p className='fontSize21 mb-1'> {props.product.content} </p>
-        <p className='fontSize20 mb-3'> {props.product.price} </p>
-      </div>
-    </div>
-  )
-}
 export default App;
