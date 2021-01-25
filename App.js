@@ -5,45 +5,42 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import { ToggleButton, ToggleButtonGroup, Col, Nav, Navbar, NavDropdown, Form, FormControl, Button, Jumbotron } from 'react-bootstrap';
 import { Link, Route, Switch, useHistory, useParams } from 'react-router-dom';
-import Detail from './Detail.js'
+
 import DetailId from './DetailId.js'
-import productData from './data.js';
+import productData from './Data';
 import Cart from './Cart.js'
-import CartData from './CartData.js'
 import Cards from './Card.js'
 
 function App() {
 
   let history = useHistory();
   let [product, setProduct] = useState(productData);
-
   const sorting = (type) => {
-    if (type === 'name') {
+    if (type === "name") {
       let newProduct = [...product];
       newProduct.sort(function (a, b) {
         return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
       });
       setProduct(newProduct);
-    } else if (type === 'desc') {
+    } else if (type === "desc") {
       let newProduct = [...product];
       newProduct.sort(function (a, b) {
         return a.price - b.price;
       });
       setProduct(newProduct);
-    } else if (type === 'asc') {
+    } else if (type === "asc") {
       let newProduct = [...product];
       newProduct.sort(function (a, b) {
         return b.price - a.price;
       });
       setProduct(newProduct);
-    } else if (type === 'origin') {
+    } else if (type === "origin") {
       setProduct(product);
     }
-  }
+  };
 
   return (
     <div className='App'>
-
       <Navbar sticky='top' bg="light" expand="lg">
         <Navbar.Brand href="/">
           <img alt="" src="/favicon-128.ico" width="30" height="30" className="d-inline-block align-top" />
